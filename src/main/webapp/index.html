@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab7 - sever</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1 id="top" style="text-align: center">Властивості CSS для роботи з анімацією</h1>
+<div class="performer">
+    <p>Лабораторна робота №1. Виконавець Павліченко Дмитрій, ТР-91</p>
+</div>
+<div>
+    <div class="text">
+        <p>
+            Якщо CSS-переходи пов’язані зі зміною властивостей елемента при переході із одного стану в інший, то CSS-анімація залежить від ключових кадрів і властивостей анімації. За допомогою CSS-анімації можна створювати ефекти,
+            які будуть автоматично запускатися і повторюватися в заданому проміжку часу.
+        </p>
+        <p>
+            Анімація в CSS може застосовуватися практично до всіх елементів в HTML5 (включаючи псевдо елементи :before та :after).
+        </p>
+        <p>
+            animation присвоюється певному блокові в його «спокійному» (звичайному) стані за допомогою властивостей анімації,
+            які можна використовувати для анімації багатьох властивостей CSS (наприклад, колір фону, висота або ширина).
+            Поведінка анімації визначається за допомогою правил в ключових кадрах (@keyframes).
+        </p>
+        <p>
+            У правилах @keyframes можна використовувати більше двох (початкового і фінального) ключових кадрів (наприклад, проміжні в позначці 30%, 75% і т.д.).
+            Також в кожному ключовому кадрі можна вказувати досить велику кількість властивостей CSS.
+        </p>
+        <p>
+            Практично всі сучасні браузери підтримують цю властивість, але для більшої сумісності потрібно використовувати префікси браузерів, причому стандартний синтаксис оголошується останнім.
+            Це відноситься і до властивості animation, і до правил ключових кадрів keyframes.
+        </p>
+    </div>
+    <div class="images">
+        <div style="margin: 3% auto auto 7%; z-index: 3">
+            <img class="img1" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftheathleteshub.org%2Fwp-content%2Fuploads%2F2020%2F02%2FTom-Brady-1200x800-Maddie-Meyer-3-Getty-Images.jpg&f=1&nofb=1" alt="football">
+        </div>
+        <div style="margin: 8.5% auto auto 25%; z-index: 5">
+            <img class="img2" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F39%2F29%2F6a%2F39296a24f3c6142adce78a45b34fee30.jpg&f=1&nofb=1" alt="nature">
+        </div>
+        <div style="margin: 14% auto auto 43%; z-index: 3;">
+            <img class="img3" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2Fa9%2Fd3%2F6f%2Fa9d36f06db06bdd3abae350feea16e6c.jpg&f=1&nofb=1" alt="nature">
+        </div>
+    </div>
+</div>
+<div class="transit">
+    <ul>
+        <li><a href="#question1">1</a></li>
+        <li><a href="#question2">2</a></li>
+        <li><a href="#question3">3</a></li>
+        <li><a href="#question4">4</a></li>
+        <li><a href="#question5">5</a></li>
+        <li><a href="#question6">6</a></li>
+        <li><a href="#question7">7</a></li>
+    </ul>
+</div>
+<div class="questions">
+    <div style="margin-top: 21.9%">
+        <p id="question1">Питання 1. Якого типу ефекти можна створювати за допомогою CSS-анімацій?</p>
+        <form action="TestsServlet" method="post">
+            <p>
+                Варіанти відповідей:<br>
+                <label>
+                    <input type="radio" name="answer1" value="A"/>
+                    Які автоматично запускаюся і повторюються в заданому проміжку часу;
+                </label>
+                <label>
+                    <input type="radio" name="answer1" value="B"/>
+                    Які можуть бути використані в програмуванні;
+                </label>
+                <label>
+                    <input type="radio" name="answer1" value="C"/>
+                    Відповідь 1 та 2.
+                </label>
+            </p>
+
+            <p>
+            <p id="question2"><br><br>Питання 2. Скільки ключових кадрів можна використовувати в @keyframes</p>
+            <p>Варіанти відповідей:<br>
+                <label>
+                    <input type="checkbox" name="answer2" value="A">
+                    Один;
+                </label>
+                <label>
+                    <input type="checkbox" name="answer2" value="B">
+                    Два;
+                </label>
+                <label>
+                    <input type="checkbox" name="answer2" value="C">
+                    Три.
+                </label>
+            </p>
+            <p id="question3"><br><br>Питання 3. Котра з властивостей CSS НЕ може бути використана для анімації?</p>
+            <p>
+                Виберіть варіант відповіді:<br>
+                <label>
+                    <select size="3" multiple name="answer3">
+                        <option value="A">Колір фону</option>
+                        <option value="B">Ширина</option>
+                        <option value="C">Посилання</option>
+                    </select>
+                </label>
+            </p>
+            <p id="question4"><br><br>Питання 4. Що потрібно використовувати в браузерах для більшої сумісності?</p>
+            <p>
+                <label>
+                    Введіть відповідь:
+                    <input type="text" name="answer4">
+                </label><br>
+            </p>
+            <p id="question5"><br><br>Питання 5. Котрі з браузерів підтримують CSS-анімації?</p>
+            <p>
+                Варіанти відповідей:<br>
+                <label>
+                    <input type="radio" name="answer5" value="A">
+                    Opera, Chrome;<br>
+                </label>
+                <label>
+                    <input type="radio" name="answer5" value="B">
+                    FireFox, Chrome;<br>
+                </label>
+                <label>
+                    <input type="radio" name="answer5" value="C">
+                    Усі перераховані.
+                </label>
+            </p>
+            <p id="question6"><br><br>Питання 6. Від чого залежить CSS-анімація</p>
+            <p>
+                Варіанти відповідей:<br>
+                <label>
+                    <input type="checkbox" name="answer6" value="A">
+                    Від зміни властивостей елементу при переходу з одного стану в інший;
+                </label>
+                <label>
+                    <input type="checkbox" name="answer6" value="B">
+                    Від ключових кадрів і властивостей анімації;
+                </label>
+                <label>
+                    <input type="checkbox" name="answer6" value="C">
+                    Від версії браузера.
+                </label>
+            </p>
+            <p id="question7"><br><br>Питання 7. За допомогою чого визначається поведінка анімації?</p>
+            <p style="size: 500px">
+                Введіть відповідь:<br>
+                <label>
+                    <input type="text" name="answer7">
+                </label><br>
+            </p>
+            <p><input type="submit" value="Підтвердити"></p>
+        </form>
+    </div>
+</div>
+<div class="res_inf0">
+    <p>Результати</p>
+</div>
+<div class="results">
+    <p>Правильно</p>
+    <p>Неправильних</p>
+</div>
+<div class="res_inf1">
+    <p style="font-size: 30px">Вітання! Ви пройшли тест</p>
+</div>
+<a href="#top" style="display: block; text-align: center; text-decoration: none;">
+    <div class="figure">
+        <div class="triangle"></div>
+        <div class="rectangle"></div>
+    </div>
+</a>
+</body>
+</html>
