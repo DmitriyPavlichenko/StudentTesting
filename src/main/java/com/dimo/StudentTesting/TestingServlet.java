@@ -25,14 +25,9 @@ public class TestingServlet extends HttpServlet {
         List<String> answers = TextProcessing.fillListByRequestData(request);
         TextProcessing.printAnswersToConsole(answers);
 
-        /*
-        ("webkpi21@gmail.com","Lab7|PavlichenkoTR-91", answers);
-        (-519873227L, "webkpilab_bot", "1858844290:AAG4xVcUFcD6nNnKqz1biKvcGrhwNCsOHMk", answers);
-        */
-
-        //Multithreading for EMailPM.java & TelegramPM.java cause i can
-        Thread mail = new Thread(new EMailPM("pavlichenko.dmitriy@gmail.com", "Lab7|PavlichenkoTR-91", answers), "EMail thread");
-        Thread telegram = new Thread(new TelegramPM(-1001357037023L, "MessageSenderForLab7_bot", "1894567321:AAE5QdaYeh1gIyy-WriuWtqi0zuzQKFKKzg", answers), "Telegram thread");
+        //Multithreading for EMailPM.java & TelegramPM.java (Wh? cause i can)
+        Thread mail = new Thread(new EMailPM("webkpi21@gmail.com","Lab7|PavlichenkoTR-91", answers), "EMail thread");
+        Thread telegram = new Thread(new TelegramPM(-519873227L, "webkpilab_bot", "1858844290:AAG4xVcUFcD6nNnKqz1biKvcGrhwNCsOHMk", answers), "Telegram thread");
         mail.start();
         telegram.start();
         try {
