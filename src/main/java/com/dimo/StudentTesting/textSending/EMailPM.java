@@ -27,8 +27,8 @@ public class EMailPM implements IPostman, Runnable {
 
     @Override
     public void sendText() {
-        final String user = "pavlichenko.working@gmail.com";
-        final String pass = "GOOGLED1mch1ka";
+        final String user = "YourEMail"; //Must to be changed
+        final String pass = "YourPassword"; //Must to be changed
         final String msg = ListToNormalizedString(answersList);
         Properties props = new Properties();
 
